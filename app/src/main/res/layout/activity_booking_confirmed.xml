@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#18b500"
+    tools:context=".BookingConfirmedActivity">
+
+    <ImageView
+        android:id="@+id/closeBookingConfirmed"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="7dp"
+        android:src="@drawable/cross"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/txtGreetUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:layout_marginTop="45dp"
+        android:text="Hi Ubaid Siddiqui !"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBookingConfirmed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:paddingHorizontal="15dp"
+        android:text="Your booking is confirmed"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        />
+
+
+    <ScrollView
+        android:id="@+id/id_mainRecyclerViewabouthotel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/layout_background"
+        android:paddingTop="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:text="Pay now and travel contact free"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:padding="10dp"
+                    android:text="Total amount"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                     />
+
+                <TextView
+                    android:id="@+id/TotalAmountInBookingConfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:padding="10dp"
+                    android:text="₹99999"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                     />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="380dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/custom_grey" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayoutForPayConfBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#18b500"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp">
+
+
+
+
+                    <TextView
+                        android:id="@+id/amountOnPayButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="Pay ₹99999"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/hotelNameConfBook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="Townhouse OAK Jyoti Heritage"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/hotelAddrConfBook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="2488, Aram Bagh , Paharaganj, Karol Bagh Tehsil, Delhi"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            />
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginRight="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+
+
+                    <ImageView
+                        android:id="@+id/hotelImageConfBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/personicon" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+                </LinearLayout>
+
+                    <View
+                        android:layout_width="380dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/custom_grey" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Booking details"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/tarvel_date_box"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/userNameConfBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Ubaid Siddiqui"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/roomsGuestsConfBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Rooms 2 x Guests 4"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Check In"
+                                android:textColor="@color/grey_font"
+                                android:textSize="16sp"
+                                 />
+
+                            <TextView
+                                android:id="@+id/checkinNameConfBook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="18 Mar, 12:00pm"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                />
+
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:backgroundTint="#FAF4EEED"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="3dp"
+
+                            >
+
+                            <TextView
+                                android:id="@+id/nightsNameConfBook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:text="10 Nights"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+
+                                />
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Check Out"
+                                android:textColor="@color/grey_font"
+                                android:textSize="16sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/checkoutNameConfBook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="28 Mar, 12:00pm"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                 <androidx.cardview.widget.CardView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     app:cardCornerRadius="5dp"
+                     android:backgroundTint="#E1DEDE"
+                     android:layout_marginHorizontal="2dp"
+                     android:layout_marginBottom="3dp"
+                     >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/directionsNameConfBook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/map"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Directions"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                />
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/callHotelNameConfBook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_baseline_call_24"
+                                app:tint="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Call hotel"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                />
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+                 </androidx.cardview.widget.CardView>
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Amenities"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recylerViewForAmenitiesConfBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:padding="10dp"
+                        android:text="Manage Your Bookings"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/modifyBookingNameConfBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/calendar_icon"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:layout_marginLeft="3dp"
+                            android:text="Modify booking"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="190dp"
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                            app:tint="@color/black" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/cancelBookingConfBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cross"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="Cancel booking"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="190dp"
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                            app:tint="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cancellationPolicyConfBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="Cancellation Policy"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgPoliciesCollapse"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="135dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        app:tint="@color/black" />
+                </LinearLayout>
+
+
+
+                    <TextView
+
+                            android:id="@+id/txtPoliciesExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                         />
+
+                    </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hotelRulesConfBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="Hotel Rules &amp; Policies"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgRulesnPoliciesCollapse"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="110dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                            app:tint="@color/black" />
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:id="@+id/txtRulesnPoliciesExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
+

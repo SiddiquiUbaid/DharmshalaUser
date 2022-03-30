@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title= "ACCOUNT SETTING">
+        <menu>
+            <item android:title="Notifications"
+                android:icon="@drawable/notification"
+                />
+            <item android:title="Change password"
+                android:icon="@drawable/password_change"
+                />
+            <item android:title="Change language"
+                android:icon="@drawable/change_language"
+                />
+
+
+
+
+        </menu>
+    </item>
+
+</menu>

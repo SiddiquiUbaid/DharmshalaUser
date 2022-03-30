@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   app:cardCornerRadius="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#082032"
+    android:layout_marginEnd="10dp"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:orientation="vertical"
+
+        >
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:id="@+id/dharamshala_image"
+            />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dharamshala pokemon"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:id="@+id/dharamshala_name"/>
+    <TextView
+        android:layout_width="215dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="20dp"
+        android:text="Dharamshala pokemon"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:id="@+id/dharamshala_adderess"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

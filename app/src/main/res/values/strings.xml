@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Dharamshala</string>
+    <string name="facebook_app_id">3032907066955440</string>
+    <string name="fb_login_protocol_scheme">fb3032907066955440</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="description">This is a super cheap acomodation free wifi and work space for students single bachelor\'s very basic bnb(bed and breakfast) room and lodging facility with a single cot bed and matress,sanitised and hygeinically maintained with a kitchen counter with gas stove and basic amenities of crockery,cutlery,pots and pans for cooking,170 ltr fridge with eggs and bread and milk ,cornflakes provided free,attached bath and toilet,separate entrance .Soap and shampoo is provided with towels and bed linen</string>
+    <string name="des">This is a super cheap acomodation free wifi and work space for students single bachelor\'s very basic bnb(bed and breakfast ......</string>
+    <string name="cancellation_policy_expanded">For cancellation done prior 9 AM on the check-in date - 100% Refundable \n\n For cancellation done post 9 AM on the check-in date - Non Refundable   </string>
+    <string name="rules_policy_expanded">Government Covid guidelines of Weekend and Night Curfew will be followed  \n\n Please check travel advisory issued by the concerned state government /local authorities before booking as, some places may have COVID-19 related travel/lodging restrictions \n\n Guests can check in using any local or outstation ID proof (PAN card not accepted)    </string>
+
+
+</resources>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/parentRelative"
+    android:background="@color/white"
     tools:context="com.example.Adapter.EditRoomsActivity">
 
 
@@ -12,7 +13,7 @@
         android:id="@+id/totalAmountLinear"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@drawable/background">
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="300dp"
@@ -145,12 +146,11 @@
                 android:layout_height="45dp"
                 android:layout_weight="1.5"
                 android:background="@color/gray_scale"
-                android:gravity="center"
-                android:maxLength="2"
-                android:inputType="none"
-                android:focusable="false"
                 android:editable="false"
-                />
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:maxLength="2" />
 
             <ImageView
                 android:id="@+id/id_guestsAdd"
@@ -192,12 +192,11 @@
                 android:layout_height="45dp"
                 android:layout_weight="1.5"
                 android:background="@color/gray_scale"
-                android:gravity="center"
-                android:maxLength="2"
-                android:inputType="none"
-                android:focusable="false"
                 android:editable="false"
-                />
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:maxLength="2" />
 
             <ImageView
                 android:id="@+id/id_roomsAdd"

@@ -44,7 +44,7 @@ public class EditRoomsActivity extends AppCompatActivity {
     HotelData hotelData;
     String numOfRooms, numOfGuests, totalNights;
     String tempCheckinDate, tempCheckoutDate;
-    String millisOfCheckin, millisOfCheckout;
+    Long millisOfCheckin, millisOfCheckout;
 
 
     private static final Integer[] editRoomsList = new Integer[3];
@@ -244,8 +244,8 @@ public class EditRoomsActivity extends AppCompatActivity {
         tempCheckinDate = bundle.getString("tempCheckinDate");
         tempCheckoutDate = bundle.getString("tempCheckoutDate");
 
-        millisOfCheckin = bundle.getString("millisOfCheckin");
-        millisOfCheckout = bundle.getString("millisOfCheckout");
+        millisOfCheckin = bundle.getLong("millisOfCheckin");
+        millisOfCheckout = bundle.getLong("millisOfCheckout");
 
         guests.setText(numOfGuests);
         rooms.setText(numOfRooms);

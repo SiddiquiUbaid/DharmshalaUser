@@ -255,12 +255,19 @@ public class HomeFragment extends Fragment implements FeaturedAdapter.OnNoteList
                         if(document.exists()){
 
                             Long checkoutMillis = orders.getMillisCheckout();
-                            if((checkoutMillis < currentMillis)){
+
+                            if((checkoutMillis > currentMillis)){
                                 Intent intent = new Intent(getContext(), BookingConfirmedActivity.class);
                                 intent.putExtra("docUid", listOfHotelUid.get(position));
                                 startActivity(intent);
 
-                                Toast.makeText(getContext(), "already booked", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getContext(), "already booked", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                //  if not booked, open Booking Activity
+                                Intent intent = new Intent(getContext(), Booking.class);
+                                intent.putExtra("docUid", listOfHotelUid.get(position));
+                                startActivity(intent);
                             }
 
                         }

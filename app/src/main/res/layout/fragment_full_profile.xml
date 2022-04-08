@@ -4,6 +4,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     tools:context=".FullProfileActivity"
@@ -23,7 +24,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="320dp"
             android:drawableEnd="@drawable/ic_baseline_edit"
-            android:drawableTint="@color/white"
+            android:drawableTint="@color/custom_grey"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="43dp" />
@@ -36,6 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/custom_grey"
 
             />
 

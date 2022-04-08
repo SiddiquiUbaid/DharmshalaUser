@@ -352,15 +352,6 @@ public class Booking<hotelImageSlider> extends AppCompatActivity
         }); */
     }
 
-    @Override
-    public void onBackPressed() {
-
-            super.onBackPressed();
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
-            //finishAffinity();
-
-    }
 
 
 
@@ -523,7 +514,7 @@ public class Booking<hotelImageSlider> extends AppCompatActivity
                                 intent.putExtra("docUid", docUid);
                                 startActivity(intent);
 
-                                finishAffinity();
+                                finish();
 
 
 

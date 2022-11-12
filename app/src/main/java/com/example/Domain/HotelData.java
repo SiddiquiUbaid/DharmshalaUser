@@ -7,6 +7,9 @@ public class HotelData {
 
     String PlaceName;
     String PlaceRent;
+    String City;
+    String Address;
+
     ArrayList<String> PlaceQualityList, PlaceSecurityList;
     ArrayList<String> HotelImages, HotelRoomImages;
     ArrayList<String> numberOfGuestsList;
@@ -71,6 +74,26 @@ public class HotelData {
 
     public HotelData() {
     }
+
+    public String getCity() {
+        return City;
+    }
+
+    public void setCity(String city) {
+        City = city;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+
+
+
 
     public String getPlaceName() {
         return PlaceName;

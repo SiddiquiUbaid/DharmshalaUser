@@ -5,39 +5,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/custom_grey"
+
     android:orientation="vertical"
     tools:context=".MyBookingsActivity">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@color/gray_scale"
-        >
 
-        <TextView
-            android:id="@+id/YourBookings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="5dp"
-            android:text=" Your Bookings"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/custom_grey"
-
-            />
-
-
-
-    </RelativeLayout>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listrecycler"
+        android:background="@color/custom_grey"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"

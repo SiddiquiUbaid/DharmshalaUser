@@ -88,6 +88,8 @@ public class HomeFragment extends Fragment implements FeaturedAdapter.OnNoteList
        View view= inflater.inflate(R.layout.fragment_home, container, false);
         mstore=FirebaseFirestore.getInstance();
 
+        // filter orders of myBookings
+        filterOrders();
 
         //gps current location
         gps = view.findViewById(R.id.gps);
@@ -231,6 +233,202 @@ public class HomeFragment extends Fragment implements FeaturedAdapter.OnNoteList
     }
 
 
+
+    public void filterOrders(){
+
+
+
+        String  uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        ArrayList<BookingOrders> upcomingOrdersList = new ArrayList<>();
+        ArrayList<BookingOrders> ongoingOrdersList = new ArrayList<>();
+        ArrayList<BookingOrders> completedOrdersList = new ArrayList<>();
+        ArrayList<BookingOrders> cancelledOrdersList = new ArrayList<>();
+
+        ArrayList<String> upcomingOrdersUidList = new ArrayList<>();
+        ArrayList<String> ongoingOrdersUidList = new ArrayList<>();
+        ArrayList<String> completedOrdersUidList = new ArrayList<>();
+        ArrayList<String> cancelledOrdersUidList = new ArrayList<>();
+
+        ArrayList<HotelData> upcomingDharamshalaList = new ArrayList<>();
+        ArrayList<HotelData> ongoingDharamshalaList = new ArrayList<>();
+        ArrayList<HotelData> completedDharamshalaList = new ArrayList<>();
+        ArrayList<HotelData> cancelledDharamshalaList = new ArrayList<>();
+
+
+
+
+        FirebaseFirestore dbStore = FirebaseFirestore.getInstance();
+        dbStore.collection("UsersData")
+                .document(uid)
+                .collection("bookingOrders")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+
+                            BookingOrders orders = document.toObject(BookingOrders.class);
+
+
+                            Long checkoutMillis = orders.getMillisCheckout();
+                            Long checkinMillis = orders.getMillisCheckin();
+                            Long currentMillis = System.currentTimeMillis();
+                            String bookingStatus = orders.getPaymentType();
+
+                            // check if booking not cancelled to proceed to filtering.
+                            if( !bookingStatus.equals("cancelled") ) {
+
+                                if(currentMillis < checkinMillis){
+                                    upcomingOrdersList.add(orders);
+                                    UpcomingOrdersFragment.upcomingOrdersList = upcomingOrdersList;
+
+                                    upcomingOrdersUidList.add(document.getId());
+                                    UpcomingOrdersFragment.listOfOrderUid = upcomingOrdersUidList;
+
+                                    // getting related dharamshala details
+                                    dbStore.collection("Dharamsalas")
+                                            .document(orders.getHotelId())
+                                            .get()
+                                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                    HotelData hotelData = task.getResult().toObject(HotelData.class);
+                                                    upcomingDharamshalaList.add(hotelData);
+                                                    UpcomingOrdersFragment.dharamshalaList = upcomingDharamshalaList;
+
+
+
+                                                }
+                                            });
+
+
+
+                                }
+
+                                if( (currentMillis > checkinMillis)  && (currentMillis < checkoutMillis)){
+                                    ongoingOrdersList.add(orders);
+                                    OngoingOrdersFragment.ongoingOrdersList = ongoingOrdersList;
+
+                                    ongoingOrdersUidList.add(document.getId());
+                                    OngoingOrdersFragment.listOfOrderUid = ongoingOrdersUidList;
+
+                                    // getting related dharamshala details
+                                    dbStore.collection("Dharamsalas")
+                                            .document(orders.getHotelId())
+                                            .get()
+                                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                    HotelData hotelData = task.getResult().toObject(HotelData.class);
+                                                    ongoingDharamshalaList.add(hotelData);
+                                                    OngoingOrdersFragment.dharamshalaList = ongoingDharamshalaList;
+
+
+
+                                                }
+                                            });
+
+
+                                }
+
+
+                                if(currentMillis > checkoutMillis){
+                                    completedOrdersList.add(orders);
+                                    CompletedOrdersFragment.completedOrdersList = completedOrdersList;
+
+                                    completedOrdersUidList.add(document.getId());
+                                    CompletedOrdersFragment.listOfOrderUid = completedOrdersUidList;
+
+                                    // getting related dharamshala details
+                                    dbStore.collection("Dharamsalas")
+                                            .document(orders.getHotelId())
+                                            .get()
+                                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                    HotelData hotelData = task.getResult().toObject(HotelData.class);
+                                                    completedDharamshalaList.add(hotelData);
+                                                    CompletedOrdersFragment.dharamshalaList = completedDharamshalaList;
+
+
+
+                                                }
+                                            });
+
+
+
+                                }
+
+                            }
+                            else{
+
+                                cancelledOrdersList.add(orders);
+                                CancelledOrdersFragment.cancelledOrdersList = cancelledOrdersList;
+
+                                cancelledOrdersUidList.add(document.getId());
+                                CancelledOrdersFragment.listOfOrderUid = cancelledOrdersUidList;
+
+                                // getting related dharamshala details
+                                dbStore.collection("Dharamsalas")
+                                        .document(orders.getHotelId())
+                                        .get()
+                                        .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                HotelData hotelData = task.getResult().toObject(HotelData.class);
+                                                cancelledDharamshalaList.add(hotelData);
+                                                CancelledOrdersFragment.dharamshalaList = cancelledDharamshalaList;
+
+
+
+                                            }
+                                        });
+
+
+
+                            }
+
+
+
+
+
+
+
+
+
+                        }
+
+
+
+
+
+
+                    }
+                });
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
     // method for featured recView's item click listener
     @Override
     public void onNoteClick(int position) {
@@ -282,8 +480,6 @@ public class HomeFragment extends Fragment implements FeaturedAdapter.OnNoteList
 
                     }
                 });
-
-
 
 
 

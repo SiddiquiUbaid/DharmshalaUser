@@ -47,11 +47,13 @@ static Context context;
         context = getApplicationContext();
 
 mstore=FirebaseFirestore.getInstance();
+        queryMethod();
 
-        mstore.collection("City")
-                .document("03utbejQjCzaUKyxLuAs")
-                .collection("PlaceDescriptionList")
-                .whereEqualTo("heading","Ryokan")
+
+        mstore.collection("Dharamsalas")
+                .document("F1uuon80hSd9ry6pzWWBY4D4SvR")
+                .collection("bookingOrders")
+                .whereEqualTo("userName","Himanshu Sharma")
                 .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<QuerySnapshot> task) {
@@ -81,7 +83,7 @@ mstore=FirebaseFirestore.getInstance();
 
     }
     public static void queryMethod(){
-        //Toast.makeText(context, ""+result, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, ""+result, Toast.LENGTH_SHORT).show();
         Log.e("result", result);
 
     }

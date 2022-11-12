@@ -80,6 +80,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/bookingPageHotelAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="18dp"
@@ -169,50 +170,51 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="18dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="18dp"
+                        android:layout_marginLeft="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
                         android:background="@drawable/tarvel_date_box">
 
                         <LinearLayout
-                            android:layout_width="270dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/txtCheckin"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="@dimen/_18sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
                                 android:text="Today"
                                 android:textColor="@color/black"
-                                android:textSize="16dp"
+                                android:textSize="@dimen/_16sdp"
                                 android:textStyle="bold" />
 
                             <TextView
 
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
+                                android:layout_marginLeft="@dimen/_18sdp"
                                 android:text="Checkin: 12:00 PM" />
 
                             <View
-                                android:layout_width="2dp"
-                                android:layout_height="15dp"
-                                android:layout_marginLeft="30dp"
-                                android:layout_marginTop="2dp"
+                                android:layout_width="@dimen/_2sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginLeft="@dimen/_30sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:background="#FAE6D8D5" />
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginVertical="2dp"
-                                android:layout_marginLeft="21dp"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_marginLeft="@dimen/_21sdp"
 
                                 android:backgroundTint="#FAF4EEED"
-                                app:cardCornerRadius="4dp"
-                                app:cardElevation="3dp"
+                                app:cardCornerRadius="@dimen/_4sdp"
+                                app:cardElevation="@dimen/_3sdp"
 
                                 >
 
@@ -220,10 +222,10 @@
                                     android:id="@+id/txtNights"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:padding="3dp"
+                                    android:padding="@dimen/_3sdp"
                                     android:text="1N"
                                     android:textColor="@color/black"
-                                    android:textSize="12dp"
+                                    android:textSize="@dimen/_12sdp"
 
                                     />
 
@@ -232,9 +234,9 @@
 
 
                             <View
-                                android:layout_width="2dp"
-                                android:layout_height="15dp"
-                                android:layout_marginLeft="30dp"
+                                android:layout_width="@dimen/_2sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginLeft="@dimen/_30sdp"
                                 android:background="#FAE6D8D5"
 
                                 />
@@ -244,35 +246,36 @@
                                 android:id="@+id/txtCheckout"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
-                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="@dimen/_18sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:text="Tommorow"
                                 android:textColor="@color/black"
-                                android:textSize="16dp"
+                                android:textSize="@dimen/_16sdp"
                                 android:textStyle="bold" />
 
                             <TextView
 
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
-                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="@dimen/_18sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="Checkout: 11:00 AM" />
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/editCheckin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:layout_marginBottom="30dp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_30sdp"
                                 android:gravity="center_horizontal"
-                                android:padding="10dp"
+                                android:padding="@dimen/_10sdp"
                                 android:text="Edit"
                                 android:textColor="#fc2c03"
                                 android:textStyle="bold" />
@@ -281,9 +284,9 @@
                                 android:id="@+id/editCheckout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="25dp"
+                                android:layout_marginTop="@dimen/_25sdp"
                                 android:gravity="center_horizontal"
-                                android:padding="10dp"
+                                android:padding="@dimen/_10sdp"
                                 android:text="Edit"
                                 android:textColor="#fc2c03"
                                 android:textStyle="bold" />
@@ -302,14 +305,16 @@
 
 
                         <LinearLayout
-                            android:layout_width="270dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:layout_weight="4"
                             android:orientation="vertical">
 
 
                             <LinearLayout
-                                android:layout_width="270dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -336,7 +341,7 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="270dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
@@ -359,15 +364,17 @@
 
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            >
 
                             <TextView
                                 android:id="@+id/editRooms"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:gravity="center"
-                                android:paddingTop="20dp"
+                                android:padding="20dp"
                                 android:text="Edit"
                                 android:textColor="#fc2c03"
                                 android:textStyle="bold" />

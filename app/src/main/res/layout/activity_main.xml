@@ -31,21 +31,22 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="148dp"
             android:layout_marginTop="152dp"
             android:text="Login"
             android:textColor="@color/black"
             android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="365dp"
+            android:layout_width="@dimen/_270sdp"
             android:layout_height="45dp"
             android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="Email id"
+            android:paddingStart="@dimen/_10sdp"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,11 +54,12 @@
 
         <EditText
             android:id="@+id/editTextTextPassword"
-            android:layout_width="365dp"
+            android:layout_width="@dimen/_270sdp"
             android:layout_height="45dp"
             android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="Password"
+            android:paddingStart="@dimen/_10sdp"
             android:inputType="textPassword"
             android:outlineProvider="bounds"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,18 +93,14 @@
             app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
 
 
-
-
-
-
         <com.facebook.login.widget.LoginButton
             android:id="@+id/imageView4"
-            android:src="@drawable/facebooklogo"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="28dp"
             android:elevation="50dp"
+            android:src="@drawable/facebooklogo"
 
 
             app:layout_constraintEnd_toEndOf="@+id/loginbtn"
@@ -151,6 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Privacy Policies"
+            android:paddingStart="@dimen/_12sdp"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signuptext" />

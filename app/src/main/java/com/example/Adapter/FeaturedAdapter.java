@@ -55,7 +55,8 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.ViewHo
     // int position is just warning, working fine.
     public void onBindViewHolder(@NonNull   FeaturedAdapter.ViewHolder holder, int position) {
         holder.name.setText(dharamshalasList.get(position).getPlaceName());
-       holder.addrs.setText("rent: "+dharamshalasList.get(position).getPlaceRent());
+        holder.rent.setText("rent: ₹"+dharamshalasList.get(position).getPlaceRent());
+        holder.addrs.setText(dharamshalasList.get(position).getCity());
         Glide.with(context).load(dharamshalasList.get(position).getHotelImages().get(0)).into(holder.drmimg);
 
         holder.drmimg.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +82,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView drmimg;
-        TextView name,addrs;
+        TextView name,addrs, rent;
         OnNoteListener onNoteListener;
 
         public ViewHolder(@NonNull   View itemView, OnNoteListener onNoteListener) {
@@ -89,6 +90,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.ViewHo
             
             drmimg=itemView.findViewById(R.id.dharamshala_image);
             addrs=itemView.findViewById(R.id.dharamshala_adderess);
+            rent=itemView.findViewById(R.id.dharamshala_rent);
             name=itemView.findViewById(R.id.dharamshala_name);
 
             itemView.setOnClickListener(this);

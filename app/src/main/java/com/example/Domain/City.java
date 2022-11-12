@@ -1,12 +1,24 @@
 package com.example.Domain;
 
+import java.util.ArrayList;
+
 public class City {
 
+    ArrayList<String> dharmshalas;
     String cityName,imgurl;
 
-    public City(String cityName, String imgurl) {
+    public ArrayList<String> getDharmshalas() {
+        return dharmshalas;
+    }
+
+    public void setDharmshalas(ArrayList<String> dharmshalas) {
+        this.dharmshalas = dharmshalas;
+    }
+
+    public City(String cityName, String imgurl, ArrayList<String> dharmshalas) {
         this.cityName = cityName;
         this.imgurl = imgurl;
+        this.dharmshalas = dharmshalas;
     }
 
     public City() {

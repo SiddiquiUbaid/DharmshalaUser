@@ -67,7 +67,8 @@ public class HotelListAdapter extends RecyclerView.Adapter<HotelListAdapter.View
     @Override
     public void onBindViewHolder(@NonNull @NotNull ViewHolder holder, int position) {
         holder.name.setText(dharamshalaList.get(position).getPlaceName());
-        holder.addrs.setText(dharamshalaList.get(position).getPlaceRent());
+        holder.rent.setText("rent: ₹"+dharamshalaList.get(position).getPlaceRent());
+        holder.addrs.setText(dharamshalaList.get(position).getCity());
         Glide.with(context).load(dharamshalaList.get(position).getHotelImages().get(0)).into(holder.drmimg);
 
         holder.drmimg.setOnClickListener(new View.OnClickListener() {
@@ -182,18 +183,20 @@ else if (dharamshalaList.get(position).getRating()<=3 && dharamshalaList.get(pos
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView drmimg, addWishList, removeWishList;
-        TextView name,addrs,rating;
+        TextView name,addrs,rent, rating;
         OnHotelListener onHotelListener;
 
         public ViewHolder(@NonNull View itemView, OnHotelListener mOnHotelListener) {
             super(itemView);
-            drmimg=itemView.findViewById(R.id.firstimage);
+            drmimg=itemView.findViewById(R.id.hotelListfirstimage);
             addWishList = itemView.findViewById(R.id.addWishList);
             removeWishList = itemView.findViewById(R.id.removeWishList);
 
-            rating=itemView.findViewById(R.id.rating);
-            addrs=itemView.findViewById(R.id.hoteladdress);
-            name=itemView.findViewById(R.id.hotelname);
+            rating=itemView.findViewById(R.id.hotelListrating);
+            addrs=itemView.findViewById(R.id.hotelListhoteladdress);
+            name=itemView.findViewById(R.id.hotelListhotelname);
+            rent=itemView.findViewById(R.id.hotelListhotelrent);
+
         }
 
         @Override

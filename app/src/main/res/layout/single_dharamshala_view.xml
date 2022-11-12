@@ -25,7 +25,7 @@
     <TextView
         android:layout_gravity="center"
         android:layout_margin="5dp"
-android:gravity="center"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dharamshala pokemon"
@@ -42,8 +42,22 @@ android:gravity="center"
         android:layout_height="20dp"
         android:text="Dharamshala pokemon"
         android:textSize="14sp"
-        android:textColor="@color/white"
+        android:textColor="#EBA83A"
         android:id="@+id/dharamshala_adderess"/>
+
+        <TextView
+            android:layout_width="215dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="20dp"
+            android:text="Dharamshala pokemon"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:id="@+id/dharamshala_rent"/>
+
     </LinearLayout>
 
 

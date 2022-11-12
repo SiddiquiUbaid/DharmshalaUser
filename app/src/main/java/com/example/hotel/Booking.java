@@ -57,7 +57,7 @@ import java.util.Date;
 
 public class Booking<hotelImageSlider> extends AppCompatActivity
         implements DatePickerDialog.OnDateSetListener {
-    TextView Showmore, buttonBookNow;
+    TextView Showmore, buttonBookNow, bookingPageHotelAddress;
     TextView editCheckin, editCheckout, editRooms;
     TextView txtCheckin, txtCheckout, txtRooms, txtGuests, txtNights;
     private ProgressBar bookingProgress;
@@ -112,6 +112,7 @@ public class Booking<hotelImageSlider> extends AppCompatActivity
 
         hotelName = findViewById(R.id.hotelName);
         hotelRent = findViewById(R.id.hotelRent);
+        bookingPageHotelAddress = findViewById(R.id.bookingPageHotelAddress);
 
         bookingProgress = findViewById(R.id.bookingProgress);
 
@@ -186,8 +187,9 @@ public class Booking<hotelImageSlider> extends AppCompatActivity
                             defaultAmount = Long.parseLong(singleHotel.getPlaceRent());
                             refAmount = singleHotel.getPlaceRent();
 
-                            //setting hotel name and rent
+                            //setting hotel name and address
                             hotelName.setText(hotelData.getPlaceName());
+                            bookingPageHotelAddress.setText(hotelData.getAddress());
 
 
                             if( editRoomsList != null){

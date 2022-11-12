@@ -20,6 +20,7 @@ import com.example.Domain.User;
 import com.example.hotel.FullProfileActivity;
 import com.example.hotel.MainActivity;
 import com.example.hotel.MyBookingsActivity;
+import com.example.hotel.OrdersTabActivity;
 import com.example.hotel.R;
 import com.example.hotel.WebViewActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -126,8 +127,8 @@ public class ProfileFragment extends Fragment {
         myBookingsIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MyBookingsActivity.class);
-                startActivity(intent);
+                Intent tabIntent = new Intent(getActivity(), OrdersTabActivity.class);
+                startActivity(tabIntent);
 
             }
         });

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/recyclerbackground"
-    android:layout_marginBottom="10dp"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="5dp"
     >
 
     <androidx.cardview.widget.CardView
@@ -15,9 +16,9 @@
         app:cardElevation="30dp"
         app:cardCornerRadius="15dp">
     <ImageView
-        android:id="@+id/firstimage"
+        android:id="@+id/hotelListfirstimage"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="@dimen/_200sdp"
         android:src="@drawable/lala"
         android:scaleType="fitXY"
         />
@@ -26,7 +27,7 @@
             android:id="@+id/addWishList"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="330dp"
+            android:layout_marginStart="@dimen/_265sdp"
             android:layout_marginTop="10dp"
             android:src="@drawable/add_bookmark_icon"
             android:scaleType="fitXY"
@@ -36,14 +37,14 @@
             android:id="@+id/removeWishList"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="300dp"
+            android:layout_marginStart="@dimen/_240sdp"
             android:layout_marginTop="10dp"
             android:scaleType="fitXY"
             />
 
 
         <TextView
-            android:id="@+id/rating"
+            android:id="@+id/hotelListrating"
             android:layout_gravity="bottom"
             android:layout_margin="8dp"
             android:layout_width="40dp"
@@ -59,8 +60,8 @@
 
     <TextView
         android:layout_marginStart="8dp"
-        android:id="@+id/hotelname"
-        android:layout_width="match_parent"
+        android:id="@+id/hotelListhotelname"
+        android:layout_width="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_height="wrap_content"
         android:text="Hotel Name"
@@ -68,12 +69,24 @@
         android:textSize="18sp"
         android:textStyle="bold"/>
     <TextView
-        android:id="@+id/hoteladdress"
+        android:id="@+id/hotelListhoteladdress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
-        android:layout_margin="8dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
         android:textColor="#EBA83A"/>
+
+    <TextView
+        android:id="@+id/hotelListhotelrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rent"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        android:layout_marginVertical="5dp"
+        android:textColor="@color/white"/>
 
 
 

@@ -1,0 +1,123 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/white" >
+	<!-- 
+	/*
+	 *	This content is generated from the API File Info.
+	 *	(Alt+Shift+Ctrl+I).
+	 *
+	 *	@desc 		
+	 *	@file 		android_large___1
+	 *	@date 		Tuesday 26th of July 2022 05:10:32 AM
+	 *	@title 		Page 1
+	 *	@author 	
+	 *	@keywords 	
+	 *	@generator 	Export Kit v1.3.figma
+	 *
+	 */
+	-->
+	<ScrollView android:id="@+id/android_large___1" 
+		android:layout_width="wrap_content" 
+		android:layout_height="match_parent" >
+
+		<RelativeLayout android:id="@+id/content_container" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" >
+
+
+			<View   android:id="@+id/rectangle_1"
+				android:background="@drawable/rectangle_1_shape"
+				 android:layout_marginStart="19dp"
+				android:layout_marginTop="28dp"
+				android:layout_width="41dp"
+				android:layout_height="38dp" />
+
+			<View
+				android:id="@+id/rectangle_3"
+				android:layout_width="360dp"
+				android:layout_height="31dp"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="81dp"
+				android:background="@drawable/rectangle_3_shape" />
+
+			<View   android:id="@+id/rectangle_2"
+				android:background="@drawable/rectangle_2_shape"
+				 android:layout_marginStart="309dp"
+				android:layout_marginTop="28dp"
+				android:layout_width="41dp"
+				android:layout_height="38dp" />
+
+			<View   android:id="@+id/ellipse_1"
+				android:background="@drawable/ellipse_1_shape"
+				 android:layout_marginStart="21dp"
+				android:layout_marginTop="130dp"
+				android:layout_width="69dp"
+				android:layout_height="66dp" />
+
+			<View   android:id="@+id/ellipse_2"
+				android:background="@drawable/ellipse_2_shape"
+				 android:layout_marginStart="274dp"
+				android:layout_marginTop="127dp"
+				android:layout_width="69dp"
+				android:layout_height="66dp" />
+
+			<View   android:id="@+id/ellipse_3"
+				android:background="@drawable/ellipse_3_shape"
+				 android:layout_marginStart="192dp"
+				android:layout_marginTop="130dp"
+				android:layout_width="69dp"
+				android:layout_height="66dp" />
+
+			<View   android:id="@+id/ellipse_4"
+				android:background="@drawable/ellipse_4_shape"
+				 android:layout_marginStart="106dp"
+				android:layout_marginTop="130dp"
+				android:layout_width="69dp"
+				android:layout_height="66dp" />
+
+			<View   android:id="@+id/rectangle_4"
+				android:background="@drawable/rectangle_4_shape"
+				 android:layout_marginStart="22dp"
+				android:layout_marginTop="258dp"
+				android:layout_width="119dp"
+				android:layout_height="149dp" />
+
+			<View   android:id="@+id/rectangle_5"
+				android:background="@drawable/rectangle_5_shape"
+				 android:layout_marginStart="288dp"
+				android:layout_marginTop="258dp"
+				android:layout_width="119dp"
+				android:layout_height="149dp" />
+
+			<View   android:id="@+id/rectangle_6"
+				android:background="@drawable/rectangle_6_shape"
+				 android:layout_marginStart="155dp"
+				android:layout_marginTop="258dp"
+				android:layout_width="119dp"
+				android:layout_height="149dp" />
+
+			<View   android:id="@+id/rectangle_7"
+				android:background="@drawable/rectangle_7_shape"
+				 android:layout_marginStart="18dp"
+				android:layout_marginTop="479dp"
+				android:layout_width="197dp"
+				android:layout_height="263dp" />
+
+			<View   android:id="@+id/rectangle_8"
+				android:background="@drawable/rectangle_8_shape"
+				 android:layout_marginStart="231dp"
+				android:layout_marginTop="479dp"
+				android:layout_width="197dp"
+				android:layout_height="263dp" />
+
+			<View   android:id="@+id/rectangle_9"
+				android:background="@drawable/rectangle_9_shape"
+				 android:layout_marginStart="0dp"
+				android:layout_marginTop="757dp"
+				android:layout_width="360dp"
+				android:layout_height="33dp" />
+
+
+		</RelativeLayout>
+
+	</ScrollView>
+</HorizontalScrollView>
